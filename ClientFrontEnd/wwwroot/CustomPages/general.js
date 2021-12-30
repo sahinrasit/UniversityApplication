@@ -3,7 +3,7 @@
 });
 var GlobalFunc = function () {
     var userInfo = function () {
-        var _temp = JSON.parse(decodeURIComponent(getCookie("UserInfo")));
+        var _temp = JSON.parse(decodeURIComponent(getCookie("UserInfo2")));
         return JSON.parse(_temp);
     };
     var setCookie=function (key, value, expiry) {

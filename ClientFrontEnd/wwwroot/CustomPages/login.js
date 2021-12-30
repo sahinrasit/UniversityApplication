@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $("#btnLogin").click(function (e) {
+        //GlobalFunc.eraseCookie("UserInfo");
         $.ajax({
             url: "/AcademicProgram/Login",
             type: "POST",
@@ -12,7 +13,6 @@
                 $('#modal-successLogin').modal('show');
                 console.log(response);
                 GlobalFunc.setCookie("UserInfo", JSON.stringify(response), 2);
-                //GlobalFunc.setCookie("X-Access-Token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyTmFtZSI6InJhc2l0c2FoaW4iLCJQZXJtIjoiQWRtaW4iLCJleHAiOjE2NDA3OTM0MjksImlzcyI6ImxvY2FsaG9zdCIsImF1ZCI6ImxvY2FsaG9zdCJ9.vkqYpIODMQWJoXVXes-btm-JzoMYsZwbKEwKm9Y8wB8", 2);
 
                 setTimeout(function () {
                     window.location.href = '/Home/Index';

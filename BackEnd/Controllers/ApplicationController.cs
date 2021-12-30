@@ -64,7 +64,7 @@ namespace BackEnd.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "CheckerOnly")]
+        [Authorize(Roles = "CheckerOnly, DeciderOnly")]
         [HttpPost("/checkapplyprogram")]
         public IActionResult checkapplyprogram(Applications application)
         {

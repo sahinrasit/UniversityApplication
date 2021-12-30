@@ -1,6 +1,9 @@
 ﻿using ClientFrontEnd.Models;
 using ClientFrontEnd.Service;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using RestSharp;
+
 namespace ClientFrontEnd.Controllers
 {
     public class AcademicProgramController : Controller
@@ -12,7 +15,7 @@ namespace ClientFrontEnd.Controllers
         }
         public IActionResult ApplyProgram()
         {
-            
+
             return View();
         }
         public IActionResult ReviewProgram()
@@ -46,6 +49,7 @@ namespace ClientFrontEnd.Controllers
         public Object Login([FromBody] SiteUser user)
         {
             var result = apiService.login(user);
+            HttpContext.Response.Cookies.Append("UserInfo2", JsonConvert.SerializeObject(result));
             return result != null ? Ok(result) : BadRequest();
         }
         public Object Logout()
@@ -73,7 +77,7 @@ namespace ClientFrontEnd.Controllers
             var result = apiService.getapplyapplication();
             return result != null ? Ok(result) : BadRequest();
         }
-        public Object ProgramAdd([FromBody]AcademicProgram program)
+        public Object ProgramAdd([FromBody] AcademicProgram program)
         {
             var result = apiService.addprogram(program);
             return result != null ? Ok(result) : BadRequest();
@@ -81,7 +85,7 @@ namespace ClientFrontEnd.Controllers
         public Object ProgramApply([FromBody] Applications applications)
         {
             var result = apiService.applyprogram(applications);
-            return result!=null?Ok(result):BadRequest();
+            return result != null ? Ok(result) : BadRequest();
         }
         public Object GetEvaluationApplication()
         {
@@ -94,6 +98,6 @@ namespace ClientFrontEnd.Controllers
             return result != null ? Ok(result) : BadRequest();
         }
         #endregion
-
     }
 }
+

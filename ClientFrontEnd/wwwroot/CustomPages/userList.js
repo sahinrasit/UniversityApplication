@@ -72,7 +72,7 @@
         });
     }
     else {
-        alert("Başvuruları Değerlendirme Yetkiniz Yok");
+        alert("Yetkiniz Yok!!!");
         setTimeout(function () {
             window.location.href = "/Home/Index";
         }, 100);

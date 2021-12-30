@@ -16,7 +16,7 @@
                 $('#modal-successLogin').modal('show');
                 setTimeout(function () {
                     window.location.href = '/Auth/Login';
-                }, 100);
+                }, 500);
             },
             failure: function (response) {
                 $('#modal-wrongPass').modal('show');

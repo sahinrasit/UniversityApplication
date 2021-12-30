@@ -17,10 +17,10 @@
                 }, 100);
             },
             failure: function (response) {
-                alert("Hata Oluştu");
+                alert("Yetkiniz Yok!!!");
             },
             error: function (response) {
-                alert("Hata Oluştu");
+                alert("Yetkiniz Yok!!!");
             }
         });
     });

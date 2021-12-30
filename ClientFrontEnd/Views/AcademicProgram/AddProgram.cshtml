@@ -1,0 +1,120 @@
+﻿<!-- DataTables -->
+<link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Akademik Program</h3>
+            </div>
+            <div class="card-footer clearfix">
+                <a data-toggle="modal" data-target="#addProgramModal" class="btn btn-sm btn-success float-right">Program Ekle</a>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table id="addProgram" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Program Adı</th>
+                            <th>Fakülte</th>
+                            <th>Şube/Dal</th>
+                            <th>Dönem</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>Program Adı</th>
+                            <th>Fakülte</th>
+                            <th>Şube/Dal</th>
+                            <th>Dönem</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.col -->
+</div>
+<!-- /.row -->
+<div class="modal fade" id="addProgramModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Akademik Program Ekle</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card-body">
+                    <p class="login-box-msg">Program Bilgilerini Giriniz</p>
+                    <div class="input-group mb-3">
+                        <input name="programName" type="text" id="programName" class="form-control" placeholder="Program Adı">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input name="faculty" type="text" id="faculty" class="form-control" placeholder="Fakülte">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input name="branch" type="text" id="branch" class="form-control" placeholder="Şube/Dal">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input name="term" type="text" id="term" class="form-control" placeholder="Dönem">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Vazgeç</button>
+                <button type="button" id="addProgramBtn" class="btn btn-primary">Ekle</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+@section Scripts {
+<!-- DataTables  & Plugins -->
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../../CustomPages/addProgram.js"></script>
+
+}

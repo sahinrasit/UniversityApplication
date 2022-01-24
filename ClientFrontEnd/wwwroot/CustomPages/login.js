@@ -11,9 +11,6 @@
             }),
             success: function (response) {
                 $('#modal-successLogin').modal('show');
-                console.log(response);
-                GlobalFunc.setCookie("UserInfo", JSON.stringify(response), 2);
-
                 setTimeout(function () {
                     window.location.href = '/Home/Index';
                 }, 100);

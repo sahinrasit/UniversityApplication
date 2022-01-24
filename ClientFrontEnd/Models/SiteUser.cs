@@ -1,8 +1,12 @@
-﻿namespace ClientFrontEnd.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ClientFrontEnd.Models
 {
     public class SiteUser
     {
+        [StringLength(20, MinimumLength = 1, ErrorMessage = "Must be between 1 and 20 character in length.")]
         public string userName { get; set; }
+        [StringLength(20, MinimumLength = 1, ErrorMessage = "Must be between 1 and 20 character in length.")]
         public string? password { get; set; }
         public string? name { get; set; }
         public string? family { get; set; }

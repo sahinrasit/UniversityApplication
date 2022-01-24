@@ -1,9 +1,8 @@
 ﻿$(document).ready(function () {
-    //var roles = JSON.parse(decodeURIComponent(getCookie("Role")));
 });
 var GlobalFunc = function () {
     var userInfo = function () {
-        var _temp = JSON.parse(decodeURIComponent(getCookie("UserInfo2")));
+        var _temp = JSON.parse(decodeURIComponent(getCookie("UserInfo")));
         return JSON.parse(_temp);
     };
     var setCookie=function (key, value, expiry) {

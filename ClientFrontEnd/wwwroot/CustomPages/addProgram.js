@@ -40,6 +40,12 @@
                     alert("Yetkiniz Yok!!!");
                 }
             },
+            "columnDefs": [
+                {
+                    "targets": '_all',
+                    "render": $.fn.dataTable.render.text()
+                }
+            ],
             "paging": true,
             "lengthChange": false,
             "searching": true,
@@ -52,7 +58,7 @@
                 { data: "programName" },
                 { data: "faculty" },
                 { data: "branch" },
-                { data: "term" }
+                { data: "term" },
             ],
         });
     });

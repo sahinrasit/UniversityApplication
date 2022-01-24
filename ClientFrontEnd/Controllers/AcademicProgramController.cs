@@ -49,7 +49,7 @@ namespace ClientFrontEnd.Controllers
         public Object Login([FromBody] SiteUser user)
         {
             var result = apiService.login(user);
-            HttpContext.Response.Cookies.Append("UserInfo2", JsonConvert.SerializeObject(result));
+            HttpContext.Response.Cookies.Append("UserInfo", JsonConvert.SerializeObject(result));
             return result != null ? Ok(result) : BadRequest();
         }
         public Object Logout()

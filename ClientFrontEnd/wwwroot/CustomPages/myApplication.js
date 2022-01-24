@@ -25,6 +25,12 @@
                 "info": true,
                 "autoWidth": false,
                 "responsive": true,
+                "columnDefs": [
+                    {
+                        "targets": '_all',
+                        "render": $.fn.dataTable.render.text()
+                    }
+                ],
                 columns: [
                     { data: "id" },
                     { data: "username" },
